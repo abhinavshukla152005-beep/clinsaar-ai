@@ -4,6 +4,21 @@
 
 ![ClinSaar architecture](architecture.svg)
 
+## 🔗 Live proof
+
+- **Live prototype:** https://abhinavshukla152005-beep.github.io/clinsaar-ai/
+- **Judge walkthrough:** [`JUDGES_DEMO_SCRIPT.md`](JUDGES_DEMO_SCRIPT.md)
+- **Verification evidence:** [`docs/PROOF_OF_WORK.md`](docs/PROOF_OF_WORK.md)
+- **Engineering decisions:** [`docs/DEVELOPMENT_LOG.md`](docs/DEVELOPMENT_LOG.md)
+
+## 30-second project overview
+
+ClinSaar AI addresses a practical OPD bottleneck: clinicians need a clear history, but patients arrive with spoken narratives, mixed language preferences and paper documents. The prototype turns a safe, minimal patient intake into a **traceable draft for clinician review**. It deliberately keeps the clinician in control:
+
+`Patient kiosk → structured history → document evidence → patient confirmation → doctor queue → clinician verification → FHIR-ready export`
+
+> The project is intentionally **not** a diagnostic chatbot. It never proposes a diagnosis, treatment or prescription.
+
 ## The problem
 
 High-volume OPDs spend valuable minutes translating a patient’s spoken story, paper documents and language preferences into a history a clinician can review. ClinSaar designs an intake layer for that operational gap: Hindi/English patient interaction, source-labelled structuring, document-extraction evidence, a doctor queue, and explicit clinician verification.
@@ -18,6 +33,14 @@ High-volume OPDs spend valuable minutes translating a patient’s spoken story, 
 - Five synthetic records, including an AYUSH-aware example.
 - FHIR-ready bundle preview/download, explicitly labelled as **not a live ABDM integration**.
 - Simulated operational analytics with transparent labelling.
+
+## Judge demo in three clicks
+
+1. Go to the [live prototype](https://abhinavshukla152005-beep.github.io/clinsaar-ai/) and choose **Patient Kiosk**.
+2. Choose **Hindi**, follow the voice-guided demo and confirm the synthetic intake.
+3. Open **Doctor Cockpit** to inspect its source timeline and click **Verify intake**. Then open **ABDM / FHIR** to download the future-ready sample bundle.
+
+This demonstrates a genuine role-to-role state transition rather than separate static screens.
 
 ## Run it
 
@@ -42,6 +65,17 @@ The architecture diagram in [`architecture.svg`](architecture.svg) shows the int
 3. Add role-based authorization, audit events, encryption and minimum-necessary retention before handling real patient data.
 4. Validate in a consented pilot using intake time, clinician correction rate, completion by language and staff feedback—not unverified health outcomes.
 5. Implement ABDM only after approved access, consent workflows and a compliant backend exist.
+
+## Repository map
+
+| Path | Why it exists |
+| --- | --- |
+| `index.html` | Complete deployable interactive prototype; no account or API key needed. |
+| `architecture.svg` | System boundary, evidence layer and future FHIR path. |
+| `test-data/` | Synthetic OCR test fixtures that can be used to evaluate a future extractor. |
+| `docs/PROOF_OF_WORK.md` | Repeatable functional test plan and evidence checklist. |
+| `docs/DEVELOPMENT_LOG.md` | Transparent product and safety decisions made during this build. |
+| `JUDGES_DEMO_SCRIPT.md` | Time-boxed narration for a 3-minute final demonstration. |
 
 ## Safety and evidence
 
