@@ -55,6 +55,16 @@ Open `index.html` in any modern browser. No build step, account, API key, or int
 4. Inspect source traceability, clinical summary, document extraction confidence, and verify it as the doctor.
 5. Use **ABDM / FHIR** to download the clearly-labelled future-ready FHIR bundle.
 
+## AI role: clear but not overclaimed
+
+The **AI Assistance Layer** in the UI shows where multilingual understanding, speech-to-structured-history transformation, summarization, normalization and OCR extraction would run in production. In this repository those examples are deterministic, local **demo simulations**—there is no live LLM, ASR, translation service or OCR API.
+
+| Functional prototype now | Simulated/demo | Future production implementation |
+| --- | --- | --- |
+| Bilingual kiosk, confirmation, queue, local edits, verification state and record-specific FHIR export | Voice response, structured-history template, OCR output/confidence and analytics | Consented server-side ASR/translation/LLM/OCR, authenticated roles, audit log, encrypted data handling and approved ABDM connectivity |
+
+Every AI-assisted or document-extracted item is a draft requiring clinician verification. ClinSaar never diagnoses, prescribes or recommends treatment.
+
 ## Architecture
 
 The architecture diagram in [`architecture.svg`](architecture.svg) shows the intended production boundary: patient input, an intake orchestrator, optional AI adapters, an evidence layer, explicit doctor verification, and a future consented FHIR integration layer. See [`test-data/synthetic-prescription-ocr.json`](test-data/synthetic-prescription-ocr.json) for synthetic OCR evaluation fixtures.

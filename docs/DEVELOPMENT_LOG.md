@@ -16,6 +16,14 @@
 - Added synthetic OCR fixtures, including a low-confidence case, for a future extractor evaluation.
 - Added a repeatable validation checklist and time-boxed judge walkthrough.
 
+## 2026-09-22 — Workflow clarity hardening
+
+- Retained the patient-entered synthetic concern through review, doctor queue and record-specific FHIR export instead of substituting a fixed narrative.
+- Added an explicit AI Assistance Layer and trust panel that distinguishes deterministic demo simulations from consented production ASR/LLM/OCR adapters.
+- Added provenance labels for patient-provided, demo-structured, document-extracted and clinician-verified information.
+- Reworked the synthetic OCR step to show an evidence → extraction → confidence/warning → verification story without claiming live OCR.
+- Updated the architecture, demo script, Q&A and proof-of-work wording to remove unsupported operational statistics and align every claim with implementation.
+
 ## Next engineering milestones
 
 1. Replace the local voice demo with a consented, server-side ASR adapter.

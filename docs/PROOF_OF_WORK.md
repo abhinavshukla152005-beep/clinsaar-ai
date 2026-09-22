@@ -15,9 +15,9 @@ This document lets a judge reproduce the demo without trusting a slide deck.
 | Test | Steps | Expected result | Status |
 | --- | --- | --- | --- |
 | Accessible language selection | Open Patient Kiosk; choose Hindi or English | Large touch cards; selected language appears in the flow | ✅ verified |
-| Voice-to-history demonstration | Advance to guided intake; tap microphone | A bilingual sample patient statement appears locally, ready for structuring | ✅ verified |
-| Safety gate | Generate structured intake | Every generated field is marked as requiring clinician verification | ✅ verified |
-| OCR evidence boundary | Analyze the synthetic prescription sample | Extracted text includes confidence and an accuracy warning | ✅ verified |
+| Voice-to-history demonstration | Advance to guided intake; tap microphone | A bilingual synthetic statement appears locally; no audio leaves the browser | ✅ verified |
+| Safety gate | Review the intake | Patient-provided text is retained; the structure is labelled as a demo template requiring clinician verification | ✅ verified |
+| OCR evidence boundary | Run the demo OCR extraction | Synthetic original evidence, extracted text, demonstrative confidence and warning are visible | ✅ verified |
 | Patient-to-doctor handoff | Confirm the synthetic intake | Record is added to doctor queue as “Needs Verification” | ✅ verified |
 | Clinician control | Open Doctor Cockpit; verify intake | State changes to “Doctor Reviewed” and source timeline updates | ✅ verified |
 | Interoperability prototype | Open ABDM/FHIR; download JSON | Future-ready FHIR sample bundle downloads; page states no live ABDM connection | ✅ verified |

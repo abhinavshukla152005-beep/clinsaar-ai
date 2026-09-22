@@ -79,3 +79,15 @@ With approval and consent, measure intake completion time, clinician correction 
 ## 20. What makes this innovative?
 
 It treats inclusion, evidence and clinician verification as one workflow: the patient’s multilingual story becomes a reviewable, traceable draft rather than an autonomous medical answer.
+
+## 21. How is patient consent handled?
+
+This prototype accepts no real patient data and has no consent backend. The UI warns users to use synthetic data only. Production consent would be a required, auditable workflow before any capture, processing or exchange of health information.
+
+## 22. What is implemented today?
+
+Today: the bilingual static kiosk, local voice demonstration, patient confirmation, synthetic evidence display, doctor queue, local edit/verification state, source timeline and selected-record FHIR-ready export. The page works without accounts, API keys or a backend.
+
+## 23. What happens when the doctor rejects AI output?
+
+The clinician can edit the local synthetic draft and leave it unverified; verification is a separate explicit action. In production, a rejected or corrected draft would require an authenticated, auditable edit event with preserved source references.
