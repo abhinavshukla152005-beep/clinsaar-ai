@@ -24,6 +24,16 @@
 - Reworked the synthetic OCR step to show an evidence → extraction → confidence/warning → verification story without claiming live OCR.
 - Updated the architecture, demo script, Q&A and proof-of-work wording to remove unsupported operational statistics and align every claim with implementation.
 
+## 2026-09-22 — Demo interaction hardening
+
+- Replaced the placeholder queue filter with local All / Pending / Verified filtering of synthetic records.
+- Replaced the browser prompt editor with an inline clinician draft form and reliable save/cancel behavior.
+- Added patient-reported symptoms, duration, medication and allergy fields without inferring diagnosis or treatment.
+- Added a visible synthetic prescription fixture beside demonstrative OCR output and warnings.
+- Added patient-to-doctor handoff ribbons, a local-only demo reset, a chatbot-vs-workflow comparison, and deployment-readiness guidance.
+- Added an offline FHIR R4 (4.0.1) basic structural check before bundle download; documented that it is not profile or ABDM conformance.
+- Reworded all voice-completion timeline claims as local voice demonstrations.
+
 ## Next engineering milestones
 
 1. Replace the local voice demo with a consented, server-side ASR adapter.

@@ -12,7 +12,7 @@ On **Overview**, point to the connected workflow and the **AI Assistance Layer**
 
 1. Open **Patient Kiosk** and select **Hindi** or **English**.
 2. Point out the large touch controls, five-step progress indicator and synthetic-data notice.
-3. Enter a clearly fictional name, age and short concern. Explain: “The exact patient-provided statement is retained rather than replaced with a canned diagnosis.”
+3. Enter a clearly fictional name, age and short concern, then complete symptoms, duration, medications and allergies as **patient-reported** fields. Explain: “The exact statement is retained rather than replaced with a canned diagnosis.”
 4. Tap the microphone to show the local voice demonstration. Say: “This is a local synthetic response; no audio leaves the browser.”
 
 ## 0:50–1:15 · AI-assisted structure and evidence boundary
@@ -25,18 +25,18 @@ On **Overview**, point to the connected workflow and the **AI Assistance Layer**
 
 1. Confirm the synthetic intake.
 2. In **Doctor Cockpit**, show the new record at the top as **Needs Verification**.
-3. Explain the evidence-provenance panel: “This separates patient provided, AI structured, document extracted and clinician verified information. That is the core differentiation: AI helps documentation; clinicians control clinical decisions.”
+3. Explain the handoff ribbon and evidence-provenance panel: “This separates patient provided, AI structured, document extracted and clinician verified information. That is the core differentiation: AI helps documentation; clinicians control clinical decisions.”
 
 ## 1:45–2:10 · Clinician review and verification
 
-1. Show the source timeline and, if useful, use **Edit locally** to show the synthetic, browser-only correction path.
+1. Use **Pending** then **Verified** to show the local queue filter. Return to All, then use **Edit local draft** to show the inline, browser-only correction path.
 2. Click **Verify intake**, read the safety confirmation, then confirm.
 3. Point to the changed state: **Doctor Reviewed** and the new verification-timeline event.
 
 ## 2:10–2:30 · FHIR-ready export and close
 
 1. Open **ABDM / FHIR** and show the selected record’s bundle.
-2. Say: “This is a FHIR-ready prototype export containing Patient, Encounter, Observation, DocumentReference and Composition. It is not a live ABDM integration, health-ID lookup or patient-data exchange.”
+2. Say: “This is a FHIR-ready prototype export containing Patient, Encounter, Observation, DocumentReference and Composition. A local FHIR R4 structural check runs before download; it is not formal profile validation, live ABDM integration, health-ID lookup or patient-data exchange.”
 3. Close: “ClinSaar does not decide care. It reduces information-collection burden so clinicians can spend more time on clinical care.”
 
 ## Judge-facing differentiators
@@ -45,3 +45,4 @@ On **Overview**, point to the connected workflow and the **AI Assistance Layer**
 - Demo boundaries are visible: synthetic data, local voice/OCR examples, no live AI or ABDM claim.
 - Patient confirmation, evidence provenance and clinician verification are first-class product states.
 - It is reliable for a judge demo: static, offline-capable and free of API keys, accounts and external dependencies.
+- **Reset demo** clears only browser-local synthetic state and restores the initial walkthrough without touching project files.

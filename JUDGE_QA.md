@@ -91,3 +91,7 @@ Today: the bilingual static kiosk, local voice demonstration, patient confirmati
 ## 23. What happens when the doctor rejects AI output?
 
 The clinician can edit the local synthetic draft and leave it unverified; verification is a separate explicit action. In production, a rejected or corrected draft would require an authenticated, auditable edit event with preserved source references.
+
+## 24. Is the FHIR export validated?
+
+Before download, the browser performs basic FHIR R4 (4.0.1) structural checks for the Bundle type, five demo resource types, and Patient references. It is not formal profile conformance, ABDM validation, or a remote FHIR-server test.

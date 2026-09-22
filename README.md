@@ -65,6 +65,12 @@ The **AI Assistance Layer** in the UI shows where multilingual understanding, sp
 
 Every AI-assisted or document-extracted item is a draft requiring clinician verification. ClinSaar never diagnoses, prescribes or recommends treatment.
 
+## FHIR-ready export validation
+
+Each generated bundle is checked locally before download against a deliberately narrow **FHIR R4 (4.0.1) structural validation**: it must be a `Bundle` of type `collection`, include `Patient`, `Encounter`, `Observation`, `DocumentReference`, and `Composition`, and keep the demo Encounter/Observation references tied to the Patient. This check runs offline in the browser and is designed to catch broken demo output.
+
+It is **not** formal FHIR profile conformance, an implementation-guide validation, server validation, certification, or ABDM integration. A production integration would validate against the selected deployment profile and an approved interoperability endpoint.
+
 ## Architecture
 
 The architecture diagram in [`architecture.svg`](architecture.svg) shows the intended production boundary: patient input, an intake orchestrator, optional AI adapters, an evidence layer, explicit doctor verification, and a future consented FHIR integration layer. See [`test-data/synthetic-prescription-ocr.json`](test-data/synthetic-prescription-ocr.json) for synthetic OCR evaluation fixtures.
