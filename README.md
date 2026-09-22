@@ -8,6 +8,7 @@
 
 - **Live prototype:** https://abhinavshukla152005-beep.github.io/clinsaar-ai/
 - **Judge walkthrough:** [`JUDGES_DEMO_SCRIPT.md`](JUDGES_DEMO_SCRIPT.md)
+- **Judge Q&A:** [`JUDGE_QA.md`](JUDGE_QA.md)
 - **Verification evidence:** [`docs/PROOF_OF_WORK.md`](docs/PROOF_OF_WORK.md)
 - **Engineering decisions:** [`docs/DEVELOPMENT_LOG.md`](docs/DEVELOPMENT_LOG.md)
 
@@ -27,7 +28,7 @@ High-volume OPDs spend valuable minutes translating a patient’s spoken story, 
 
 - Patient kiosk with Hindi and English, large touch targets and a local voice-flow demonstration.
 - Minimal profile policy: name, age and preferred language only. The demo excludes sex/gender and warns against real data entry.
-- Structured intake with traceability and “AI-generated — Requires clinician verification” gates.
+- Patient-entered statement retained through the queue, with traceability and clinician-verification gates.
 - A safe, synthetic prescription/OCR evidence step with confidence and warning language.
 - Functional patient handoff into a doctor queue; clinician verification updates the record state.
 - Five synthetic records, including an AYUSH-aware example.
@@ -76,6 +77,7 @@ The architecture diagram in [`architecture.svg`](architecture.svg) shows the int
 | `docs/PROOF_OF_WORK.md` | Repeatable functional test plan and evidence checklist. |
 | `docs/DEVELOPMENT_LOG.md` | Transparent product and safety decisions made during this build. |
 | `JUDGES_DEMO_SCRIPT.md` | Time-boxed narration for a 3-minute final demonstration. |
+| `JUDGE_QA.md` | Concise, evidence-based answers to likely judge questions. |
 
 ## Safety and evidence
 
