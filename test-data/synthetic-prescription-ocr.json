@@ -1,0 +1,10 @@
+{
+  "dataset": "ClinSaar AI synthetic OCR evaluation set",
+  "version": "0.1",
+  "safety_notice": "All documents and extracted content are fictional. This file is a test fixture, not clinical data and not a basis for diagnosis or treatment.",
+  "samples": [
+    {"id":"RX-DEMO-001","document_type":"prescription","ground_truth":{"medicines":["ORS sachet"],"note":"Oral rehydration advice","date":"2026-09-20"},"expected_handling":"Show source text, confidence, and clinician-verification requirement."},
+    {"id":"LAB-DEMO-002","document_type":"lab_report","ground_truth":{"test":"Haemoglobin","value":"12.8 g/dL","date":"2026-09-19"},"expected_handling":"Display as unverified extracted observation; preserve original document reference."},
+    {"id":"RX-DEMO-003","document_type":"handwritten_prescription","ground_truth":{"medicines":["Fictional sample medicine A"],"note":"Illegible segments intentionally present"},"expected_handling":"Surface low confidence and ask for clinician review; do not infer missing text."}
+  ]
+}
